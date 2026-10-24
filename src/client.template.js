@@ -11,7 +11,8 @@
   }]));
   const CSS = __CSS__;
   const NIGHT = __CITLALI_NIGHT__;
-  const STANDING = __CITLALI_STANDING__;
+  const READING = __CITLALI_READING__;
+  const STILL = __CITLALI_STILL__;
   const PORTRAIT = __CITLALI_PORTRAIT__;
   const MARK = __CITLALI_MARK__;
 
@@ -158,21 +159,42 @@
         }));
       }
 
+      function AnimatedCharacter() {
+        const [animated, setAnimated] = React.useState(() => !document.hidden && !window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+        React.useEffect(() => {
+          const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+          const update = () => setAnimated(!document.hidden && !media.matches);
+          document.addEventListener("visibilitychange", update);
+          media.addEventListener("change", update);
+          update();
+          return () => {
+            document.removeEventListener("visibilitychange", update);
+            media.removeEventListener("change", update);
+          };
+        }, []);
+        return h("img", {
+          "data-citlali-veil-reading": true,
+          src: animated ? READING : STILL,
+          alt: "",
+          draggable: false,
+        });
+      }
+
       function Scene() {
         return h("aside", {
           "data-citlali-veil-scene": true,
           role: "img",
-          "aria-label": "茜特菈莉新衣装透明立绘，身边环绕轻纱、星轨与星芒",
+          "aria-label": "茜特菈莉趴在枕头上读书，鲨鱼玩偶在身边浮动，轻纱与星轨环绕",
         },
           h("div", { "aria-hidden": "true" },
-            h("svg", { "data-citlali-veil-orbits": true, viewBox: "0 0 360 620", fill: "none" },
-              h("ellipse", { cx: "180", cy: "300", rx: "148", ry: "258", stroke: "currentColor", strokeWidth: ".75" }),
-              h("ellipse", { cx: "180", cy: "300", rx: "128", ry: "270", transform: "rotate(23 180 300)", stroke: "currentColor", strokeWidth: ".55" }),
-              h("path", { d: "M-30 430C80 350 110 530 220 445s150-60 190-130", stroke: "currentColor", strokeWidth: "1.1" }),
-              h("path", { d: "M-30 455C80 375 110 555 220 470s150-60 190-130", stroke: "currentColor", strokeWidth: ".55" }),
+            h("svg", { "data-citlali-veil-orbits": true, viewBox: "0 0 480 360", fill: "none" },
+              h("ellipse", { cx: "240", cy: "180", rx: "210", ry: "140", stroke: "currentColor", strokeWidth: ".75" }),
+              h("ellipse", { cx: "240", cy: "180", rx: "178", ry: "158", transform: "rotate(23 240 180)", stroke: "currentColor", strokeWidth: ".55" }),
+              h("path", { d: "M-30 260C90 190 130 330 270 250s170-50 240-120", stroke: "currentColor", strokeWidth: "1.1" }),
+              h("path", { d: "M-30 282C90 212 130 352 270 272s170-50 240-120", stroke: "currentColor", strokeWidth: ".55" }),
             ),
             h(Star),
-            h("img", { "data-citlali-veil-standing": true, src: STANDING, alt: "", draggable: false }),
+            h(AnimatedCharacter),
             h("span", { "data-citlali-veil-scene-signature": true }, "NIGHT WHISPERS · NATLAN"),
           ),
         );

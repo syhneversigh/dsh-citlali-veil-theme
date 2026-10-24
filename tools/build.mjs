@@ -16,11 +16,12 @@ if (lightKeys.some((name) => !name.startsWith("--dsw-") && !name.startsWith("--s
   throw new Error("Unexpected token name in palette.");
 }
 
-const [template, css, night, standing, portrait, mark] = await Promise.all([
+const [template, css, night, reading, still, portrait, mark] = await Promise.all([
   read("src/client.template.js"),
   read("src/theme.css"),
   dataUrl("assets/citlali-night.webp", "image/webp"),
-  dataUrl("assets/citlali-standing.webp", "image/webp"),
+  dataUrl("assets/citlali-reading.webp", "image/webp"),
+  dataUrl("assets/citlali-reading-still.webp", "image/webp"),
   dataUrl("assets/citlali-portrait.webp", "image/webp"),
   dataUrl("assets/icon.svg", "image/svg+xml"),
 ]);
@@ -29,7 +30,8 @@ const replacements = {
   __DARK__: JSON.stringify(DARK, null, 2),
   __CSS__: JSON.stringify(css),
   __CITLALI_NIGHT__: JSON.stringify(night),
-  __CITLALI_STANDING__: JSON.stringify(standing),
+  __CITLALI_READING__: JSON.stringify(reading),
+  __CITLALI_STILL__: JSON.stringify(still),
   __CITLALI_PORTRAIT__: JSON.stringify(portrait),
   __CITLALI_MARK__: JSON.stringify(mark),
 };

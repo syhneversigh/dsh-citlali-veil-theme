@@ -212,8 +212,8 @@ body[data-citlali-veil-theme] [data-slot="conversation.input"] {
   z-index: 0;
   right: clamp(12px, 2.5cqw, 42px);
   bottom: clamp(12px, 2.5vh, 32px);
-  width: clamp(220px, 21cqw, 330px);
-  height: min(74vh, 700px);
+  width: clamp(340px, 34cqw, 580px);
+  height: min(52vh, 460px);
   color: var(--citlali-veil-ink);
   pointer-events: none;
   user-select: none;
@@ -253,7 +253,7 @@ body[data-citlali-veil-theme] [data-slot="conversation.input"] {
   animation: citlali-veil-star 5.5s ease-in-out infinite;
 }
 
-[data-citlali-veil-standing] {
+[data-citlali-veil-reading] {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -279,8 +279,8 @@ body[data-citlali-veil-theme] [data-slot="conversation.input"] {
 @container citlali-veil-stage (max-width: 1120px) {
   [data-citlali-veil-scene] {
     right: 10px;
-    width: 220px;
-    opacity: .78;
+    width: 300px;
+    opacity: .82;
   }
   [data-citlali-veil-scene-signature] {
     display: none;

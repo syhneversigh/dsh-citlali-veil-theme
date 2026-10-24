@@ -9,12 +9,17 @@
 - 全页新衣装场景，保留文字与输入区的清晰层次。
 - 浅色「星雾」与深色「夜帷」完整配色。
 - 半透明侧栏、玻璃输入框、浮层、描边与柔和阴影。
-- 无边框角色立绘、星轨、轻纱与渐变欢迎语。
+- 无边框角色、星轨、轻纱与渐变欢迎语。
+- 新增官方趴姿阅读动画：书本、枕头与鲨鱼玩偶轻动，约 6 秒循环；减少动态效果或页面隐藏时自动切换为静态趴姿。
 - 背景漂移、错峰星芒与轻微呼吸动画；页面隐藏时暂停，支持减少动态效果。
 - 皮肤总开关、插画开关、明暗切换，以及 0–80% 背景淡化滑杆。
 - 全部美术本地内嵌，运行时无需联网下载素材。
 
 不包含人格、表情包、上传管理或桌宠交互。
+
+### 1.1.0 · 枕上夜读
+
+![茜特菈莉趴姿阅读动画](docs/screenshots/Reading.webp)
 
 ## 安装
 
@@ -28,10 +33,10 @@ dsh plugin --profile desktop add github:syhneversigh/dsh-citlali-veil-theme
 
 ### 从 Release 安装
 
-下载 [dsh-citlali-veil-theme-1.0.0.tgz](https://github.com/syhneversigh/dsh-citlali-veil-theme/releases/download/v1.0.0/dsh-citlali-veil-theme-1.0.0.tgz)，然后运行：
+下载 [dsh-citlali-veil-theme-1.1.0.tgz](https://github.com/syhneversigh/dsh-citlali-veil-theme/releases/download/v1.1.0/dsh-citlali-veil-theme-1.1.0.tgz)，然后运行：
 
 ```powershell
-dsh plugin --profile desktop add "C:\path\to\dsh-citlali-veil-theme-1.0.0.tgz"
+dsh plugin --profile desktop add "C:\path\to\dsh-citlali-veil-theme-1.1.0.tgz"
 ```
 
 把路径替换为实际下载位置。Web profile 可将命令中的 `desktop` 改为 `web`，但本项目目前只在桌面版进行了界面验收。
@@ -50,7 +55,7 @@ npm run check
 npm run pack:local
 ```
 
-安装包生成在 `dist/dsh-citlali-veil-theme-1.0.0.tgz`。
+安装包生成在 `dist/dsh-citlali-veil-theme-1.1.0.tgz`。
 
 ## 版权与非官方声明
 

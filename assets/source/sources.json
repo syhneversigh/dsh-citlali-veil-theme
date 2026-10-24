@@ -9,6 +9,11 @@
     "usage": "Local, personal desktop skin artwork. Unofficial theme; no affiliation or endorsement.",
     "edits": "Cropped the official outfit showcase to the full-page bedroom illustration, a square portrait, and the standing figure. Removed the standing figure's dark background with color-region masks and retained its original outline; resized and encoded all assets as WebP. No character, outfit, or color redesign. The unmodified downloaded showcase is retained only in source assets and is excluded from the package."
   },
+  "animatedArtwork": {
+    "source": "https://kimi-web-img.kimi.ai/prod-data/online-image/search-upload/c9f61e0dfaafd343826cd85d4c58924f.gif",
+    "page": "https://ys.mihoyo.com/main/news/detail/164913",
+    "edits": "Cropped the upper reading animation from the official outfit GIF, removed the cyan background frame by frame with color-region masks, resized to 480px WebP frames, and retained the official motion with short holds into a 6.05-second loop. A static reading frame is included for reduced-motion and hidden-page fallback. No pose, outfit, or character redesign."
+  },
   "decorativeArtwork": {
     "origin": "Original SVG star-and-crescent mark, orbital lines, veil curves, and star accents created for this skin; not traced from a third-party logo."
   }
