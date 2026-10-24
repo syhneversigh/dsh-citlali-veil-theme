@@ -1,0 +1,50 @@
+{
+  "name": "dsh-citlali-veil-theme",
+  "version": "1.0.0",
+  "private": true,
+  "description": "茜特菈莉「星帷漫游」— full-page Genshin Impact skin for DeepSeek Harness.",
+  "homepage": "https://github.com/syhneversigh/dsh-citlali-veil-theme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syhneversigh/dsh-citlali-veil-theme.git"
+  },
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./icon": "./assets/icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "assets/icon.svg",
+    "assets/citlali-night.webp",
+    "assets/citlali-standing.webp",
+    "assets/citlali-portrait.webp",
+    "assets/source/sources.json",
+    "src",
+    "tools/build.mjs"
+  ],
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "check": "node --check index.js && node --check client.js && node --check src/palette.mjs && node --check tools/build.mjs",
+    "pack:local": "npm pack --pack-destination dist"
+  },
+  "keywords": ["dsh-plugin", "deepseek-harness", "theme", "genshin-impact", "citlali"],
+  "license": "UNLICENSED",
+  "engines": { "node": ">=18" },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-theme"
+      ]
+    }
+  }
+}

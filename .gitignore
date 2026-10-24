@@ -1,0 +1,8 @@
+node_modules/
+dist/
+npm-debug.log*
+/*.png
+/tools/native-*.py
+/tools/capture-visible.py
+/assets/source/citlali-official.jpg
+.env

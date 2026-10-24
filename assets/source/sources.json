@@ -1,0 +1,15 @@
+{
+  "characterArtwork": {
+    "work": "原神 / Genshin Impact",
+    "character": "茜特菈莉 / Citlali",
+    "outfit": "星与烟帷的夜语",
+    "copyright": "米哈游 / HoYoverse. All character artwork rights remain with the original rights holders.",
+    "page": "https://ys.mihoyo.com/main/news/detail/164913",
+    "artworkSource": "https://kimi-web-img.kimi.ai/prod-data/online-image/search-upload/6369d971e196355d5673e5b47b172095.jpg",
+    "usage": "Local, personal desktop skin artwork. Unofficial theme; no affiliation or endorsement.",
+    "edits": "Cropped the official outfit showcase to the full-page bedroom illustration, a square portrait, and the standing figure. Removed the standing figure's dark background with color-region masks and retained its original outline; resized and encoded all assets as WebP. No character, outfit, or color redesign. The unmodified downloaded showcase is retained only in source assets and is excluded from the package."
+  },
+  "decorativeArtwork": {
+    "origin": "Original SVG star-and-crescent mark, orbital lines, veil curves, and star accents created for this skin; not traced from a third-party logo."
+  }
+}
